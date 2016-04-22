@@ -1,0 +1,23 @@
+\begin{landscape}
+\section{DFMEA} \label{dfmea}
+\begin{minipage}{\linewidth}
+\captionof{table}[DFMEA]{Design Failure Modes and Effect Analysis for Drive Box}
+\footnotesize
+\begin{tabular}{| p{1cm}|p{3cm}p{3.5cm}p{0.5cm}p{3cm}p{0.5cm}p{3.5cm}p{0.5cm}p{0.5cm}p{3cm} |} \hline
+Purpose & Potential Failure Mode & Potential Effects of Failure & SEV & Potential Cause of Failure & OCC & Current Controls Evaluation Method & DET & RPN & Recommended Actions \\ \hline
+\multirow{2}{1cm}{Seal} & Plates bend, create gap & Premature wear to belts/reduced belt life & 7 & Plate cannot support robot weight & 4 & O-rings damaged, water in drivebox, belt slip & 9 & 252 & Reinforce plates, check bolt tension \\
+& Seals fail & Cause belt slip  & 8 & Deflection in drive box components & 4 & Water inside drivebox, belt slippage & 6 & 192 & Reinforce plates, check bolt tension \\ \hline
+\multirow{5}{1cm}{Transmit Torque} & Belt breaks & Vehicle doesn't move & 9 & Sudden tension increase & 3 & Wheels don't turn, vehicle output reduced & 3 & 81 & Replace the belt  \\
+ & Belt slips & Vehicle partially moves & 8 & Seals fail & 3 & Vehicle output reduced, less responsive, noise & 6 & 144 & Revise sealing issue \\
+ & Bearings too tight, cause friction & Premature wear of bearings & 6 & Improper fitting of bearing & 2 & Wheels don't turn freely & 8 & 96 & Machine to proper tolerance \\
+ & Bearings break & Wheels stop rolling, vehicle skids. Damage to belts & 7 & Improper fitting of bearing & 1 & Unwanted noise & 3 & 21 & Replace bearing and observe cause of breaking \\
+ & Back plate deforms & Inoperable vehicle & 10 & Material strength too low & 6 & Angled drivebox & 7 & 420 & Reinforce back plate \\ \hline
+\multirow{5}{1cm}{Support Robot Weight} & Pivot pierces through back plate & Dysfunctional drivebox & 9 & Plate not thick enough, too much force & 5 & Dragging drivebox, drivebox falls off & 1 & 45 & Redesign back plate \\
+ & Plate deflection & Belt snaps, possible break of seal - vehicle cannot drive & 5 & Plate not thick enough too much force & 3 & Snapped belt, visual/angled drivebox & 6 & 90 & Increase radii of plate cutouts \\
+ & Wheel shafts deflect & Added stress on bearings & 3 & Excess weight on shaft & 1 & Angled wheels & 2 & 6 & Revise shaft design \\
+ & Bushing failure & Drive box dismounts from frame & 7 & Bushing can't handle skid steer & 3 & Play in bushing, drivebox doesn't spin freely, noise & 1 & 21 & Replace bushings \\
+ & Fasteners fail at pivot/drivebox interface& Drive box dismounts from pivot & 7 & Skid steer forces greater than estimated & 3 & Dragging drivebox, drivebox falls off & 1 & 21 & Use a higher grade of fastener \\ \hline
+ \end{tabular}
+ \label{tab:dfmea}
+ \end{minipage}
+ \end{landscape}
