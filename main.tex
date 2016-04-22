@@ -19,6 +19,12 @@
 \usepackage{enumitem}
 \usepackage{wrapfig}
 \usepackage{array}
+% to bold row of table
+\newcolumntype{$}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
 \usepackage{libertine} \usepackage[libertine]{newtxmath}
 \newcolumntype{L}{>{\arraybackslash}m{5in}}
 \setlength\extrarowheight{2pt}
