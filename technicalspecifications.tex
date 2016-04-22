@@ -5,28 +5,8 @@ As with any off road vehicle, it is always difficult to predict loading conditio
 \\
 It should be noted that only a static analysis was conducted for this project due to slow operating speeds. With a top speed of 3 km/h, the forces due to dynamic loading would only differentiate slightly. To compensate for this, a larger factor of safety was desired for each component. Given an adequate time line, one could conduct a full dynamic simulation to obtain more accurate results and confirm that the design to follow is indeed adequate for the imposed loading conditions. 
 
-\section{Belt Drive}
-\subsection{Description}
-Synchronous belt drive systems are said to be efficient, reliable, virtually maintenance free and are supposed to outlast any comparable chain drive system. The system used on this vehicle will consists of a Gates PowerGrip GT3 belt which is rated for high torque transmission at variable speeds while the sprockets and accompanying bushings will be supplied by Martin Sprocket for cost saving reasons.
-\subsection{Design Constraints}
-The overall width of belts and sprockets proved to be a considerable constraint in itself. While there was a specific width required to ensure power transmission without failure, this same width also hindered the design of the drive box as it would result in a thicker and bulkier drive box. The engineers at Gates were consulted regarding optimization of belt width and sprocket diameters. After a couple weeks of back and forth by email, it was decided that a 30mm wide belt would be best suited.
-
-Next constraint proved to be the diameters of the sprockets as there was an overall size constraint of the drive box. It should also be noted that larger diameters lead to a substantial increase in weight and cost. Therefore finding the happy-medium between required diameter for belt life, overall size, weight and cost was a challenge. There was also the ratio between diameters of the driving sprocket and idlers that needed to remain constant. This ratio, determined by required output speeds and torque transmission, was found to be 1.6.
-
-The position of the idler was also a challenge due to dimensional constraints imposed by the location of the small and large sprockets and ensuring sufficient wrap angle on the driving sprocket. A constraint that wasn’t discovered until part sourcing began was the availability of the sprocket diameters and material selection for these. This proved to be the biggest constraint to overcome since all of those mentioned above also came into play with this constraint.
-\subsection{Functional Requirements}
-\subsection{Alternate Solutions}
-\subsection{Analysis and Design}
-
-\section{Wheel Shaft Assembly}
-\subsection{Description}
-\subsection{Design Constraints}
-\subsection{Functional Requirements}
-\subsection{Alternate Solutions}
-\subsection{Analysis and Design}
-\subsubsection{Wheel Shaft}
-\subsubsection{Wheel Bearings}
-\subsubsection{Shaft Seals}
-\subsubsection{Front Bearing Housings}
-\subsubsection{Rear Bearing Housing}
-\subsubsection{Rim Mount}
+\include{beltdriveassembly}
+\include{wheelshaftassembly}
+\include{pivotassembly}
+\include{driveshaftassembly}
+\include{driveboxassembly}
