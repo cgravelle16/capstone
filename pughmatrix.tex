@@ -2,7 +2,7 @@
 
 \begin{table}[htbp]
 \centering
-\caption{Pugh Matrix to select Placement of the Four Motor. The options for the motor placement are inside the chassis or outside.}
+\caption[Pugh Matrix for Motor Placement]{Pugh Matrix to select Placement of the Four Motor. The options for the motor placement are inside the chassis or outside.}
 \begin{tabular}{| $p{2cm}^p{5cm}^l^p{2cm}^l^l |} \hline
 Category & Division & Weight & Datum (Original Design) & Motor in & Motor out \\ \hline
 Cost & Manufacturing Cost & 1 & 0 & 2 & -2\\
@@ -32,7 +32,7 @@ Schedule & Design Time & 3 & 0 & 2 & -1 \\
  
  \begin{table}[htbp]
 \centering
-\caption{Pugh Matrix to select drive mechanism. The options are belts, chains, and direct drive.}
+\caption[Pugh Matrix for Drive System]{Pugh Matrix to select drive mechanism. The options are belts, chains, and direct drive.}
 \begin{tabular}{| $p{2cm}^p{5cm}^l^p{2cm}^l^l^l |} \hline
 Category & Division & Weight & Datum & Belt & Chain & Direct\\ \hline
 Cost & Manufacturing Cost & 1 & 0 & 0 & 0 & -2\\
@@ -64,7 +64,7 @@ Schedule & Design Time & 4 & 0 & -1 & 0 & -2\\
  
  \begin{table}[htbp]
 \centering
-\caption{Pugh Matrix to select between coupled versus independent wheel suspension}
+\caption[Pugh Matrix for Wheel Suspension]{Pugh Matrix to select between coupled versus independent wheel suspension}
 \begin{tabular}{| $p{2cm}^p{5cm}^l^l^l^l |} \hline
 Category & Division & Weight & Datum & One Wheel & Coupled Wheels \\ \hline 
 Costs & Material Cost & 4 & 0 & -1 & 0 \\
@@ -85,7 +85,7 @@ Traction & Weight distribution from tires & 1 & 0 & 1 & 0 \\
 Steering & Torsional strength & 4 & 0 & 2 & 1 \\
 \rowstyle{\bfseries}  & Subtotal &  & 0 & 8 & 4 \\
 Robot Stability & Tipping side to side effects & 4 & 0 & 2 & 0 \\
-\rowstyle{\bfseries}  & Subtotal &  & 0 & 8 & 0 \\ \hline \hline
+\rowstyle{\bfseries}  & Subtotal &  & 0 & 8 & 0 \\ \hline 
 \rowstyle{\bfseries} Totals & Sum &  & 0 & 7 & 12 \\
 \rowstyle{\bfseries}  & \# positives &  & 0 & 5 & 1 \\
 \rowstyle{\bfseries}  & \# negatives &  & 0 & 3 & 0 \\ \hline
@@ -95,7 +95,7 @@ Robot Stability & Tipping side to side effects & 4 & 0 & 2 & 0 \\
  
  \begin{table}
 \centering
-\caption{Pugh Matrix to select suspension type for coupled wheels.}
+\caption[Pugh Matrix for Suspension Type]{Pugh Matrix to select suspension type for coupled wheels.}
 \begin{tabular}{| $p{2cm}^p{5cm}^l^p{2cm}^p{2cm}^l |} \hline
 Category & Division & Weight & Datum (Spring) & Spring and Damper & Coil over \\ \hline
 Costs & Initial Cost & 3 & 0 & -1 & -2 \\
@@ -124,7 +124,7 @@ Setup & Ease of initial setup & 4 & 0 & -1 & -2 \\
 
  \begin{table}
 \centering
-\caption{Pugh Matrix to select taper roller bearing arrangement.}
+\caption[Pugh Matrix for Bearing Placement]{Pugh Matrix to select taper roller bearing arrangement.}
 \begin{tabular}{| $p{2cm}^p{5cm}^l^l^l^l |} \hline
 Category & Division & Weight & Datum & Back-to-Back & Front-to-Front \\ \hline 
 Loading & Radial Loading & 3 & 0 & 0 & 0 \\
