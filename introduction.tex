@@ -1,12 +1,33 @@
 \section{Introduction}
 Penguin ASI is a robotics firm engaged in the development of automation strategies for the mining industry and the development of telerobotic systems to work in extreme and hazardous environments. As the use of automated technology becomes more prevalent in the mining industry there comes a need to develop a telecommunications network. In order to prevent the need to retrofit an existing mine with a communications network, Penguin had developed an optical communications range extender and mounted it on a teleoperated, mobile platform to be able to relay the signals. The first iteration of this platform had some issues with its design that Penguin had wished to resolve in a second iteration prototype. In order to produce a functional prototype all issues with the previous version must have been addressed, and the robot must have been able to achieve certain functional requirements laid out by the client, Penguin ASI.  
-\section{Problem Statement}
-The initial communications robot produced by Penguin ASI had displayed many issues affecting its performance and needed to be addressed. Its operating environment was intended to include traversal through wet and rough terrain, which required all drive components to be sealed against water and dirt. To seal the original drive boxes gasket maker was used, but was inadequate and allowed water to enter the drive box as seen in Figure \ref{} 
- 
-\begin{figure}[H]
+\subsection{Problem Statement}
+The initial communications robot produced by Penguin ASI had displayed many issues affecting its performance that needed to be addressed. Its operating environment was intended to include traversal through wet and rough terrain, which required all drive components to be sealed against water and dirt. To seal the original drive boxes gasket maker was used, but proved to be inadequate and allowed water to enter the drive box as seen in Figure \ref{fig:inside_drive_box_orig}. Secondly, the drive box travel was not limited to $\pm$30\degree rotation initially, and a spring system was implemented as a temporary solution. Only two, 746\,W motors were used, and after testing were deemed insufficient to drive the vehicle and payload up hills of a 20\% grade. Furthermore, each motor drove four wheels and transmitted power through a long chain extending the length of the vehicle as seen in Figure \ref{fig:interior_orig}. The length and complexity of the chain driven system introduced many modes of failure, slapped the bottom of the vehicle during skid steer operation and change of direction, and did not have an adequate tensioning device. 
+\begin{figure}[h]
 \centering
-\includegraphics[width=0.5\linewidth]{./images/inside_drive_box_orig}
-\caption{}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width=\linewidth]{./images/inside_drive_box_orig}
+\caption{Original Drive Box Interior Demonstrating Improper Sealing}
 \label{fig:inside_drive_box_orig}
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[width=\linewidth]{./images/interior_orig}
+\caption{Chain Driven System Inside Vehicle Body}
+\label{fig:interior_orig}
+\end{minipage}
 \end{figure}
- 
+
+The disassembly of the original driveboxes was difficult and it was observed that there was no way to determine oil levels without opening them up. Also, under skid steer operation it was reported that the drive boxes underwent significant deflection which was not desireable. Each drive box was chain driven, however there was no method to determine the chain tension, which was problematic and was suspected to be the cause of premature failure of chains. Other components that were failing included radial bearings used on the drive shafts and wheel shafts. After opening the drive boxes it was observed that these radial bearings were paired with a single taper roller bearing and it was suspected that the cause of failure was the axial loading on the radial bearing. 
+\subsection{Functional Requirements}
+Overall the vehicle was able to drive and maneuvre with limited capabilities, however it was in the interest of the client to address these issues for a redesign of the product. In order to meet the needs of the client a list of requirements for the final design were agreed upon. The requirements were broken down into six main categories, with each highlighting the necessary functionality for the redesign of the communications robot. 
+\subsubsection{Power}
+The vehicle was to be fully battery powered using six EV Traction Dry Cell Industrial Battery Blocks. To drive the vehicle, four 746\,W DC motors were provided by Penguin ASI. The drive time of the vehicle was to exceed one hour at peak operating conditions, and the batteries were to be seated in the vehicle to provide clearance between battery terminals and frame components.
+\subsubsection{Operating Conditions}
+The vehicle was to be used in aboveground and underground mining applications, and as such would be subject to varying temperatures, however the client had specified the need to operate primarily in 2\,\degree C. The vehicle also needed to be able to climb and descend a maximum grade of 20\% and have every component sealed from external water.
+\subsubsection{Size and Weight}
+All components of the vehicle were to remain within the dimensions of the frame with the exception of the wheels. The robot needed to be able to carry a payload of 230\,kg in addition to its own weight, and be able to reach a top speed of 3\,km/h under these conditions.
+\subsubsection{Interfacing}
+Penguin ASI had specified the need to reuse the frame from the existing robot, however minor frame modification were permitted. Motor interfacing needed to be done using a Roboteq controller, and battery charging was to be carried out by employees at Penguin. The redesign of the vehicle needed to ensure that that existing communications devices and telescoping arms could still be mounted on the upper platform of the frame, and that space be left in the wings of the vehicle to accomodate electrical components.
+\subsubsection{Robot Control}
+The motors on each side of the vehicle were to be controlled independently. A Roboteq controller was to be used, and appropriate voltage limits were to be programmed into the controller to prevent damaging the motors. For testing purposes, the use of a laptop to and joystick to control the motors was permitted. The implementation of wireless control was to be carried out by Penguin employees upon the successful demonstration of an operable vehicle.
+\subsubsection{Care and Maintenance}
+All new components were to be designed with the intent of improving functionality and maintainability. It was desired that all components be easy to assemble/disassemble, internal components be easily accessible, and grease nipples be incorporated to grease bearings. Furthermore, a means to check belt tension was to be incorporated in the final design.       
