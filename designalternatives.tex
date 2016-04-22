@@ -1,12 +1,18 @@
-\usepackage{gensymbol}
 \section {Design Alternatives}
-The main feature to the project was based off of power transmission from the motors to the wheels. For this, three different methods were explored. The first consideration was a chain drive which was also found on the previous iteration. However, chains proved to required quite a bit of maintenance and must operate in a sealed and lubricated gearbox. Aside from sealing concerns, corrosion and stretching from use were other issues that posed problems and increased maintenance time. 
+The main feature to the project was based off of power transmission from the motors to the wheels. For this, three different methods were explored. 
 
-The second was a serial shaft configuration that would require many 90\degree joints which are expensive, bulky and high maintenance as well. This last options was nearly eliminated right off the hop but was kept for comparison and analysis in the decision making process. 
+\subsection{Chains}
+The first consideration was a chain drive which was also found on the previous iteration of the robot. However, chains proved to require quite a bit of maintenance and must operate in a sealed and lubricated gearbox. Aside from sealing concerns, corrosion and stretching from use were other issues that posed problems and increased maintenance time. Many of these robots will be on standby and must be ready to use whenever needed, therefore any maintenance or checks require before every use are unfavorable. 
 
-The third and final option was a synchronous belt drive system. After some research and discussions with the engineers at Gates, one of the world's leading manufacturers in belt systems, it was concluded that a belt drive would be very suitable for the application at hand. Operating in a dry environment, virtually no stretch over it's lifetime and a significant increase in longevity over a chain drive are all features that made belts much more attractive. As claimed by Gates, belts are to last 3 times longer than chains and sprockets for belts are to last 10 times longer than ones for chains as claimed by gates. It is to note that belt don't take side loading or twisting very well, therefore much emphasis on reducing these affects were included in the design of the drivebox structure. 
+Chains did prove to have some advantages such as great operating efficiencies, being a cost efficient option and consisting of replacement parts that are readily available in most industrial settings.
 
-Belts were chosen after careful evaluation against the other alternatives as seen in the Pugh matrix in Appendix ~\REF~{pugh}
+\subsection{Shafts}
+The second was a serial shaft configuration that would require many 90\degree joints which are expensive, bulky and are high maintenance as well. This option was nearly eliminated right off the hop but was kept for comparison and analysis in the decision making process. 
+
+\subsection{Belts}
+The third and final option was a synchronous belt drive system. After some research and discussions with the engineers at Gates, one of the world's leading manufacturers in belt systems, it was concluded that a belt drive would be very suitable for the application at hand. Operating in a dry gearbox, virtually no stretch over it's lifetime and a significant increase in longevity over a chain drive are all features that made belts much more attractive. Synchronous belts also have operating efficiencies similar to chains, thus making them just as viable. As claimed by Gates, belts are to last 3 times longer than chains and sprockets for belts are to last 10 times longer than ones for chains. It is to note that belt don't take side loading or twisting very well, therefore much emphasis on reducing these affects were a main focus in the design of the drivebox structure. Corrosion was also an important consideration for every option, and even though belts won't rust, other components such as the sprockets and shafts very well could. Some part sourcing revealed that aluminum sprockets could be purchased and other steel components could be sprayed with a durable, anti-rust coating that wouldn't contaminate the belt and bearings.
+
+Belts were chosen after careful evaluation against the other alternatives as seen in the Pugh matrix in Appendix ~\ref{pugh}
 
 
 
