@@ -5,12 +5,24 @@ The drive shaft is located between the reduction shaft and the drive box. It is 
 	\caption{Assembly of output shaft with bearings, seals and sprocket mounted.}
 	\label{fig:output_shaft}
 \end{figure}
-\subsection{Design Constraints}
-Using the DE-Goodman equation the minimum diameter of the output shaft was able to be calculated after two iterations. The minimum shaft diameter ended up being 20 mm and the bearings were selected using the SKF manual to select the proper taper roller bearings for the loading conditions that can be seen in Figure~\ref{fig:fb_output_shaft}, the values of these forces are located in 
+\subsection{Design Constraints and Functional Requirements}
+The design of the output shaft had a length constrained to the distances between the reduction shaft and the end of the exterior drive box. It was required to transmit the torques and withstand the radial forces that can be seen in Table~\ref{tab:output_shaft_specs}.  
+
+\subsection{Analysis and Design}
+Using the DE-Goodman equation the minimum diameter of the output shaft was able to be calculated after two iterations. The minimum shaft diameter ended up being 20 mm and the bearings were selected using the SKF manual to select the proper taper roller bearings for the loading conditions that can be seen in Figure~\ref{fig:fb_output_shaft}. The free body diagram for the shaft is only the end that contains the two taper roller bearings and the bushing for the sprocket since the coupling end is assumed to be rigid.The finite element analysis for the output shaft can be seen in the appendix.
 \begin{figure}[htbp]
 	\includegraphics[width=\linewidth]{images/fb_output_shaft.jpg}
 	\caption{Free Body Diagram for Output Shaft.}
 	\label{fig:fb_output_shaft}
 \end{figure}
-\subsection{Functional Requirements}
-\subsection{Analysis and Design}
+\begin{table}[htbp]
+	\centering
+	\caption{Output Shaft Design Specifications}
+	\begin{tabular}{| p{5cm}ll |} \hline
+		Requirement & Value & Unit & Reason \\ \hline
+		Torque Transmission & 156 & Nm & Max torque output by motor \\
+		Radial Load & 3331	& N & Radial load applied by drive sprocket \\
+	\end{tabular}
+	\label{tab:output_shaft_specs}
+\end{table}
+
