@@ -37,9 +37,6 @@ The combination of the weight of the vehicle and the forces imposed by the skid 
 
 \subsubsection{Wheel Bearings}
 The bearings for this application needed to withstand the large axial forces due to the aggressive skid steer motions and still handle the weight of the vehicle. Size was also an important consideration as larger bearings would directly increased the size of other components such as bearing housings.
-\\
-***INSERT TABLE OF BEARING SELECTION***
-\\
 
 \subsubsection{Front Bearing Housing}
 The front bearing housing had many factors affecting its design. It need to house the taper roller bearings that were mounted onto the shaft. In addition, an o-ring groove needed to be added to meet the sealing requirements and two radial seals needed to be added on each side of the bearing. It also needed to be quick and easy to machine. 
@@ -91,30 +88,15 @@ The results obtained from the Matlab script were unreasonably large, however man
 \end{figure}
 
 \begin{figure}[h]\centering
-	\includegraphics[width=.7\linewidth]{dom/hub_iso_rndr.jpg}
-	\caption{Bearing Housing}
-	\label{fig:housing}
-\end{figure}
-
-\begin{figure}[h]\centering
-	\includegraphics[width=.7\linewidth]{dom/small_sprocket_with_bushing_rndr.jpg}
-	\caption{Small Sprocket}
-	\label{fig:small_sprocket}
-\end{figure}
-
-\begin{figure}[h]\centering
 	\includegraphics[width=.7\linewidth]{dom/rim_mount_iso_rndr.jpg}
 	\caption{Rim Mount}
 	\label{fig:rid_mount}
 \end{figure}
 
-
 \subsubsection{Wheel Bearings}
 Taper roller bearings were selected for their superior axial loading capabilities while still having decent radial loading ratings when compared to other tradition radial bearings. Size for size, these bearings were still competitive as well. Once bearing type was selected, the bearing selection procedure outlined in the SKF Bearing Manual was followed in order to find the optimal bearing for the task. Based on the reaction forces calculated for the wheel shaft and its diameter, properly sized bearings were selected. A proper assessment also included bearing life calculations and taking into consideration the added axial forces by the taper roller bearings. Since the wheel shaft is essentially a cantilever beam, the bearing sizes were quite large and two separate bearings were required. One on the front and another on the back size. For compatibility, interchangeability and availability reasons, both bearings were selected to be identical even though the rear one doesn't see nearly as much loading.
 
-See bearing calculations in Appendix for details on lifespan due to use.
-\\
-
+Please refer to Section ~\ref{ws_bearing} for detailed work on bearing selection. See bearing calculations to Figure ~\ref{bearing_calc} in Appendix for a detailed outline of the SKF bearing selection process.
 
 \subsubsection{Shaft Seals}
 Two type of shaft seals were required for the proposed shaft layout. The two outermost seals are housing mounted seals. These are the most common type of radial seals and offered the largest selection. Knowing the shaft dimensions from bearing selection and shaft diameters, all that needed to be selected is which style of shaft seal to chose. A conventional seal with a rubber nitrile coating was recommended by the professionals at Penguin ASI. As for the second type of seal, the selection wasn't so obvious. This second seal was to be a shaft mounted seal, however selection for these proved to be very limited. Only metric sizes were available and there we large variations in diameters. Choosing the closest one to the minimum diameter calculated that would fit between the bearing and sprocket left only one option, however this SKF seal still came with the preferred nitrile rubber coating.
@@ -123,6 +105,12 @@ Please refer to the wheel shaft BOM for detailed part numbers of shaft seals.
 
 \subsubsection{Front Bearing Housings}
 There were many constraints to the front bearing housing and with the seals selected, and bearing dimensions known, the design of this part was fairly straight forward. The goal to utilize in-stock material also determined that 5 inch, 6061 aluminum would be used. Once the design was complete, a check of bolt and thread strength was conducted as well as an FEA of the component under the loading conditions obtained during the wheel shaft calculations. An o-ring groove was also added to provide adequate sealing for the drivebox.
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/hub_iso_rndr.jpg}
+	\caption{Bearing Housing}
+	\label{fig:housing}
+\end{figure}
 
 Please refer to FEA section of the report for details strength analysis of bearing housing.
 
@@ -134,4 +122,13 @@ The final design of this component varied slightly from the initial one. The out
 Please refer to the FEA Appendix for more details of rear bearing housing design.
 
 \subsubsection{Rim Mount}
-The rim mounts from the previous robot were still in good condition and only needed minor modifications for them to meet the requirements of the new design. Modifications included a change to the bolt pattern and boring out the mounting hole onto the shaft. After some calculations, it was determined that a standard taper hole design of 4.18\degree would be strong enough to resist the rotation moments at the wheels and it would mate perfectly with the taper of the wheel shaft for proper mounting. The taper also has the added benefit of self centering, which is crucial for the design of vehicles to prevent unwanted vibrations due to misalignments and poor performance. 
+The rim mounts from the previous robot were still in good condition and only needed minor modifications for them to meet the requirements of the new design. Modifications included a change to the bolt pattern and boring out the mounting hole onto the shaft. After some calculations, it was determined that a standard taper hole design of 4.18\degree would be strong enough to resist the rotation moments at the wheels and it would mate perfectly with the taper of the wheel shaft for proper mounting. The taper also has the added benefit of self centering, which is crucial for the design of vehicles to prevent unwanted vibrations due to misalignments and poor performance.
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/rim_mount_iso_rndr.jpg}
+	\caption{Rim Mount}
+	\label{fig:rid_mount}
+\end{figure}
+ 
+
+Please refer to Figure ~\ref{taper_calc} for detailed taper strength calculations.

@@ -10,17 +10,17 @@ The design of the output shaft had a length constrained to the distances between
 
 \subsection{Analysis and Design}
 Using the DE-Goodman equation the minimum diameter of the output shaft was able to be calculated after two iterations. The minimum shaft diameter ended up being 20 mm and the bearings were selected using the SKF manual to select the proper taper roller bearings for the loading conditions that can be seen in Figure~\ref{fig:fb_output_shaft}. The free body diagram for the shaft is only the end that contains the two taper roller bearings and the bushing for the sprocket since the coupling end is assumed to be rigid.The finite element analysis for the output shaft can be seen in the appendix.
-\begin{figure}[htbp]
+\begin{figure}[H]
 	\includegraphics[width=\linewidth]{images/fb_output_shaft.jpg}
 	\caption{Free Body Diagram for Output Shaft.}
 	\label{fig:fb_output_shaft}
 \end{figure}
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{Output Shaft Design Specifications}
-	\begin{tabular}{| p{5cm}lll |} \hline
+	\begin{tabular}{| p{5cm}llp{7cm} |} \hline
 		Requirement & Value & Unit & Reason \\ \hline
-		Torque Transmission & 156 & Nm & Max torque output by motor \\
+		Torque Transmission & 156 & Nm & Max torque transmitted by motor to the driveshaft assuming operation at 895.2\,W through a 30:1 reduction \\
 		Radial Load & 3331	& N & Radial load applied by drive sprocket \\ \hline
 	\end{tabular}
 	\label{tab:output_shaft_specs}
