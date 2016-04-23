@@ -2,39 +2,88 @@
 
 \subsubsection{Description}
 
-The pivot is use to let the outer drive boxes rotate around there pivot points while the travel limiter prevents over-rotation of the drive boxes. The driveshaft is design to transmit torque from the 30:1 reduction gearbox output shaft to the driving pinion located in the drive box. The shaft passes through the center of the pivot, and as such is expected to see minimal bending moments. The shaft incorporated shoulders to axially locate shaft mounted seals as well as a shoulder for a taper lock bushing which is inserted into the driving pinion in the drive box. To connect the drive shaft to the output 30:1 reduction box shaft, a love joy coupling was used. The shaft coupling is attached to the reduction box shaft using a key and a set screw, and would allow the drive shaft to slide in from the other side, transmitting torque through a key on the drive shaft. The drive shaft is held in place by the pivot, which sandwiches the frame and chassis between its inside and outside flanges, preventing it from moving. Figure~\ref{fig:pivot_assembly_drw} illustrates the proposed shaft layout within the pivot.
+The pivots main function is to reduce the bending that would be transmitted to the output drive shaft from the drive box and protects the shaft from debris or other objects from coming in contact. The other function of the pivot is to limit the rotation of the exterior drive box to a certain range of rotation. What limits this rotation is a bumper component that is fastened with ten 5/16" bolts to the end of the pivot that is located in the interior of the chassis. This limiter only allows a rotation of 30 degree movement in both directions. The pivot is designed to be able to accept the a 35 mm OD seal,  47 mm tapered roller bearing and a 58 mm OD seal on the end that is fastened to the drive box. Figure~\ref{fig:pivot_assembly_drw} show the final design of the pivot assembly. Do to material limitation, the limiter design wasn't built and installed on the final build. We replaced the limiter with caps to still create the sandwich effect with the flange of the pivot positioned on the outside. Figure~\ref{fig:pivot_bld} show a manufactured pivot.
 
 \begin{figure}[htbp]
 \centering
 \includegraphics[height=0.3\textheight]{./images/pivot_assembly_drw}
-\captionof{figure}[Pivot]{Side view of the the internal and external components of the pivot assembly.}
+\captionof{figure}[Pivot]{The pivot is shown in yellow and the limiter is shown in red.}
 \label{fig:pivot_assembly_drw}
 \end{figure}
 
-
-\subsubsection{Design Constraints}
-
-The minimum required shaft diameter was calculated using two iterations of DE Goodman shaft design theory. The second iteration took into account more realistic stress concentrations allowing further diameter reduction on the shaft. The shaft layout and loading assumptions are illustrated in Figure~\ref{fig:fb_output_shaft} forces at the ends representing the radial forces applied from the taper roller bearings and the force at the middle being the resultant force of the sprocket determined from the Gates Design IQ software. Bearing calculations were performed according to the procedure outlined in the SKF bearing design manual for taper roller bearings. It is important to note that the free body diagram in Figure~\ref{fig:fb_output_shaft} only represents the radial component of the force from the taper roller bearing, and axial forces not shown were also taken into consideration. Design constraints and requirements are outlined in Table~\ref{tab:drive_const}.  
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=0.3\textheight]{./images/fb_output_shaft}
-\captionof{figure}[Pivot]{Drive shaft free body diagram.}
-\label{fig:fb_output_shaft}
+\includegraphics[height=0.3\textheight]{./images/pivot_bld}
+\captionof{figure}[Pivot]{Manufactured pivot.}
+\label{fig:pivot_bld}
 \end{figure}
 \newpage
-\begin{table}[htbp] \centering \caption{Driveshaft Design Constraints and Requirements} \begin{tabular}{| llll |} \hline Requirement & Value & Unit & Reasoning \\ \hline Torque Transmission & 156 & Nm & Maximum torque output of motor \\ Radial Load & 3331 & N & Radial load applied by sprocket \\ \hline \end{tabular} \label{tab:drive_const} \end{table}
 
-\subsubsection{Functional Requirements}
 
-The pivot is design to create a pivot point for which the drive box can rotate upon and act a rough suspension. But, the pivot is also design to be compact and bear most if not all the stress and strain emitting from the outer drive box during operation. It shouldn't succumb to any plastic bending in either the pivot itself or the bushing and pivot sleeve in the frame insert. Also the limiter should be covered so that no fingers are other body extremities can be pinched during maintenance unless maintenance on the actual limiter. If this is the case, then proper measure should be taken so that no pinching injury happens. The pivot is also design to be modular, as if a section or part of the pivot breaks, replacing the part should be easily managed. 
+
+\subsubsection{Design Constraints and Functional Requirements}
+
+The design of the pivot was dimensionally constrained in both its allowable inside and outside diameters as well as the required overhang of the flanged section from the vehicle body. The diameter of the flanged section would also need to be able to accommodate a sufficient number of appropriately sized fasteners for attachment to the drive box, and be sufficiently larger than the pivot body diameter to keep the pivot section axially located against bushings pressed inside the pivot mounting hole in the frame of the vehicle. Additionally, the travel limiter was constrained by the required range of rotation for the pivot, with the travel limiter having flat contact surfaces on both sides. Furthermore, it was necessary for the pivot to remain attached to gear box during assembly and disassembly, with the placement of the pivot to be axially located using two opposing flanges on each of the pivot section and travel limiter. This design would necessitate a simple method of attaching the pivot to the travel limiter to allow for ease of assembly of the drive box to the frame. Table~\ref{tab:pivot_const} outlines the design constraints of the pivot. Finally, the pivot needed to incorporate shoulders to accommodate press fitting the outer race of taper roller bearings and shaft seals inside.
+
+
+
+\begin{table}[htbp]
+ \centering
+ \caption{Pivot Design Constraints and Requirements}
+ \begin{tabular}{| p{4cm}llp{6cm} |} \hline
+ Constraint & Value & Unit & Reasoning \\ \hline
+ Maximum outside diameter & 4 & inch & Constrained by dimensions of frame section available for support \\
+ Minimum inside diameter & 2 \textsuperscript{1}/\textsubscript{4} & inch & Chosen to accommodate a coupling to attach drive shaft to driven, output shaft, with a \textsuperscript{1}/\textsubscript{8}'' space between the coupling and the inner wall of the pivot \\
+ Length of pivot section outside the vehicle & 1 & inch & To provide spacing between the drive box and the outer frame of the buggy and to accommodate fasteners for drive box attachment \\
+ Flange diameter for both pivot and travel limiter & \textsuperscript{1}/\textsubscript{4} & inch & Provide contact surface between flanged face and bushing face. Axial location of pivot within frame mounting section. Bear axial loads applied to pivot during skid steer operation \\
+ Angular travel limit for pivot and limiter assembly & 60 & degrees (full range) & Angular range of rotational motion of entire gearbox assembly to prevent contact with upper compartments of frame assembly \\
+ Ease of assembly & - & - & General constraint which specifies the need for the pivot section to be attached to the travel limiter, as a two piece assembly, allowing for quick assembly and removal of the gear box \\ \hline
+ \end{tabular}
+ \label{tab:pivot_const}
+ \end{table}
+\newpage
+The pivot is design to create a pivot point for which the drive box can rotate upon and act a rough suspension. But, the pivot is also design to be compact and bare most, if not all, the stress and strain emitting from the outer drive box during operation. It shouldn't succumb to any plastic bending in either the pivot itself or the bushing and pivot sleeve in the frame insert. Also the limiter should be covered so that no fingers are other body extremities can be pinched during maintenance unless maintenance on the actual limiter. If this is the case, then proper measure should be taken so that no pinching injury happens. The pivot is also design to be modular, as if a section or part of the pivot breaks, replacing the part should be easily managed. 
 
 \subsubsection{Alternate Solution}
 
-Many travel limiter design have been considered. One was comprised as two parts in a circular configuration where the downside of this design was that it was to big to fit in the the instrumentation robot as well as mounting the fixed par of the two would of been a problem. As far as the actual pivot design, there are not many design alternatives besides a eliminating the pivot and the fit the shaft with two coupling that would connect to the drive box. The problem with that design is that it would too complicated and have many issues with respect to strength. 
+A few alternative solutions for the pivot were investigated before a final design was specified. Each design was an iteration of the previous, with modifications made to accommodate the addition of bearings and seals, as well as the accommodation of a removable shaft coupling in more recent iterations. Finite element analysis was performed to determine overall strength of the pivot and was used to reduce the size of the travel limiter.
 
+Figure~\ref{fig:pivotold} and Figure~\ref{fig:pivotfinal} illustrate the intermediate design of both the travel limiter and the final pivot design. It can be seen from the old design that the travel limiter underwent design change where the final design is less complicated to make and was overall a more efficient solution. This version of the design was made with shoulders for a press fit taper roller bearing as well as two shaft seals. The previous iteration of the pivot design saw increases in outer diameter to nearly 4 1/2 ", which was increased to incorporate the addition of taper roller bearings. Again this design was meant to provide shoulders for both shaft seals and bearings, and be able to provide clearance for the drive shaft. Figure and Figure ,illustrate the second design concept. It can be seen that this design made use of twelve 5/16"- 24 bolts to secure the pivot to the drive box. A further ten bolts of the same size were used to fasten the travel limiter to the pivot. The flange diameters for both the travel limiter and the pivot are equal in this design.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height=0.3\textheight]{./images/oldpivothaft}
+\captionof{figure}[Pivot]{Original pivot design.}
+\label{fig:pivotold}
+\end{figure}
+\newpage
+\begin{figure}[htbp]
+\centering
+\includegraphics[height=0.3\textheight]{./images/finalpivot}
+\captionof{figure}[Pivot]{Final pivot design.}
+\label{fig:pivotfinal}
+\end{figure}
+
+The final version of the pivot is longer to accommodate the thickness of the pivot sleeve in the frame insert.  Also, in the final pivot design, we reduced the amount of bolt holes for the pivot to drive box connection for the purpose of reducing manufacturing time. We went from 12 to 10 bolt holes and, after bolt calculation, we concluded that having a reduced amount of bolt holes was acceptable while the hole diameter remained the same in both version of the pivots seen above.
 
 \subsubsection{Analysis and Design}
 
-The finite element analysis report for all free revisions of the output shaft can be found in APPENDIX A.  The revisions 0 and 2 can be seen in the FIGURE 25 and FIGURE 26 below. In revision 0 the stresses experienced at the end of the output shaft actually exceed the yield strength of the 4340 steel. The changes between the two shaft layouts are significantly different since the first revision was designed to mount radial bearings onto and the final revision now has a taper roller bearing on each end of the sprocket. Seals are also located on both sides of the taper roller bearing to provide a seal. The stresses experienced in the final revision are greatly reduced and do not exceed the yield strength of the material selected. Fillets were also added to reduce the stress concentrations at the shoulders of the different diameters on the shaft. Also, the pivot more than accommodates the bending and stresses coming from the drive box see in FIGURE.
+There are four revisions of the pivot that can be seen above in this section. In Appendix~\ref{sec:pivot_fea} of the report, an FEA can be found for each revision. Figure~\ref{fig:pivot_stress_fea} and Figure~\ref{fig:old_pivot_stress_fea} below shows a comparison of the first design of the pivot compared to the final.
+
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[height=0.3\textheight]{./images/FEA_pivotfinal}
+%\captionof{figure}[Pivot]{Von Mises Stresses of final pivot}
+%\label{fig:FEA_pivotfinal}
+%\end{figure}
+%
+%\begin{figure}[htbp]
+%\centering
+%\includegraphics[height=0.3\textheight]{./images/FEA_pivotold}
+%\captionof{figure}[Pivot]{Von Mises Stresses of original  pivot.}
+%\label{fig:FEA_pivotold}
+%\end{figure}
+
+The Von Mises stress maps show the stress concentration around the change in diameter. A fillet was added to reduce the stress concentration in that area. Also the step down diameter was increased to fit the new seal for the taper roller bearing that is located in the pivot. This increase in thickness may also have caused a reduction in the stress experienced.
+
 
