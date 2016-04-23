@@ -1,19 +1,19 @@
 \section{Wheel Shaft Assembly}\label{sec:wheel_shaft_assembly}
 The wheel shaft assembly consists of a combination of parts such as bearings, seals and structural members. The assembly needed to be compact, cost efficient and easy to assemble with manufacturability in mind. %With the shaft being the main supporting component connecting the wheels to the drive box, much strength analysis has been conducted for it with varied materials and profiles. The rim mount which boasts the wheel onto the shaft also needed to be an elegant solution that provided self centering fastening. Taper roller bearings were also needed to handle the large axial forces induced by the skid steer motions. In order to house the bearings close to the drivebox, a bearing housing was designed in such a way that limits the flex in the shaft. To run a dry drivebox, radial seals were added to either side of the bearings to contain the grease, but also help limit contamination from the outside environment.
 
-\begin{figure}[h]\centering
+\begin{figure}[H]\centering
 	\includegraphics[width=.7\linewidth]{images/explode_wheel_assembly.jpg}
 	\caption{Exploded view of wheel shaft assembly.}
 	\label{fig:wheel_explode}
 \end{figure}
 
-\begin{figure}[h]\centering
+\begin{figure}[H]\centering
 	\includegraphics[width=.7\linewidth]{images/wheel_shaft_section.jpg}
 	\caption{Section view of wheel shaft assembly.}
 	\label{fig:wheel_section}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{Component details for wheel shaft assembly.}
 	\begin{tabular}{| lll |} \hline
@@ -57,14 +57,13 @@ First step of the design was to set up the shaft layout. Since the belt design h
 
 Given the previously mentioned loading conditions and general shaft layout, a Matlab script was created to calculate the reaction forces throughout the shaft and generate moment diagrams. A second Matlab script was created to calculate the minimum shaft diameters based the DE Goodman method using previously calculated moments, material properties and shaft features such as keys, fillets and shoulder sizes.
 
-The results obtained from the Matlab script were unreasonably large, however many machine design books state that the DE Goodman is simply a conservative estimate, therefore further finite element analysis using software was conducted. The static simulation resulted in reduced, but more acceptable diameters. 
-~\ref {tab:shaft_calc}
+The results obtained from the Matlab script were unreasonably large, however many machine design books state that the DE-Goodman is simply a conservative estimate, therefore further finite element analysis using software was conducted. The static simulation resulted in reduced, but more acceptable diameters. Refer to Table~\ref{tab:shaft_calc} for the shaft calculations.
 
-\begin{table}[htbp]
+\begin{table}[H]
 	\centering
 	\caption{Summary of forces acting on the wheel shaft.}
 	\begin{tabular}{| llll |} \hline
-		Name & Variable & Value & Unit \\
+		Name & Variable & Value & Unit \\ \hline
 		Radial Force at wheel & F\textsubscript{ar} & 7600.00 & N \\
 		Tangential Force at wheel & F\textsubscript{at} & 546.80 & N \\
 		Radial Force at outside bearing & F\textsubscript{br} & 18950.00 & N \\
@@ -89,7 +88,7 @@ The results obtained from the Matlab script were unreasonably large, however man
 \subsubsection{Wheel Bearings}
 Taper roller bearings were selected for their superior axial loading capabilities while still having decent radial loading ratings when compared to other tradition radial bearings. Size for size, these bearings were still competitive as well. Once bearing type was selected, the bearing selection procedure outlined in the SKF Bearing Manual was followed in order to find the optimal bearing for the task. Based on the reaction forces calculated for the wheel shaft and its diameter, properly sized bearings were selected. A proper assessment also included bearing life calculations and taking into consideration the added axial forces by the taper roller bearings. Since the wheel shaft is essentially a cantilever beam, the bearing sizes were quite large and two separate bearings were required. One on the front and another on the back size. For compatibility, interchangeability and availability reasons, both bearings were selected to be identical even though the rear one doesn't see nearly as much loading.
 
-Please refer to Section ~\ref{ws_bearing} for detailed work on bearing selection. See bearing calculations in Figure ~\ref{bearing_calc} in Appendix for a detailed outline of the SKF bearing selection process.
+Please refer to Appendix~\ref{sec:ws_bearing} for detailed work on bearing selection. See bearing calculations in Figure~\ref{fig:bearing_calc} of Appendix~\ref{sec:ws_bearing} for a detailed outline of the SKF bearing selection process.
 
 \subsubsection{Shaft Seals}
 Two type of shaft seals were required for the proposed shaft layout. The two outermost seals are housing mounted seals. These are the most common type of radial seals and offered the largest selection. Knowing the shaft dimensions from bearing selection and shaft diameters, all that needed to be selected is which style of shaft seal to chose. A conventional seal with a rubber nitrile coating was recommended by the professionals at Penguin ASI. As for the second type of seal, the selection wasn't so obvious. This second seal was to be a shaft mounted seal, however selection for these proved to be very limited. Only metric sizes were available and there we large variations in diameters. Choosing the closest one to the minimum diameter calculated that would fit between the bearing and sprocket left only one option, however this SKF seal still came with the preferred nitrile rubber coating.
@@ -112,16 +111,14 @@ The rear bearing housing was also a straight forward design due to the imposed d
 
 The final design of this component varied slightly from the initial one. The outer bore was reduced to increase the outer strength of the unit and for better and quick manufacturability. The depth dimensions didn't change, only the outer diameter did. The new design also meant getting rid of the nuts on the back side of the unit as the new design incorporated the thread inside the components, which also simplified the assembly.
 
-Please refer to the FEA Appendix for more details of rear bearing housing design.
+Please refer to the Appendix~\ref{sec:bh_fea} for more details of rear bearing housing design.
 
 \subsubsection{Rim Mount}
-The rim mounts from the previous robot were still in good condition and only needed minor modifications for them to meet the requirements of the new design. Modifications included a change to the bolt pattern and boring out the mounting hole onto the shaft. After some calculations, it was determined that a standard taper hole design of 4.18\degree would be strong enough to resist the rotation moments at the wheels and it would mate perfectly with the taper of the wheel shaft for proper mounting. The taper also has the added benefit of self centering, which is crucial for the design of vehicles to prevent unwanted vibrations due to misalignments and poor performance.
-
-\begin{figure}[h]\centering
+The rim mounts from the previous robot were still in good condition and only needed minor modifications for them to meet the requirements of the new design. Modifications included a change to the bolt pattern and boring out the mounting hole onto the shaft. After some calculations, it was determined that a standard taper hole design of 4.18\degree\,\,would be strong enough to resist the rotation moments at the wheels and it would mate perfectly with the taper of the wheel shaft for proper mounting. The taper also has the added benefit of self centering, which is crucial for the design of vehicles to prevent unwanted vibrations due to misalignments and poor performance.
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=.7\linewidth]{dom/rim_mount_iso_rndr.jpg}
 	\caption{Rim Mount}
 	\label{fig:rim_mount}
 \end{figure}
- 
-
-Please refer to Figure ~\ref{taper_calc} for detailed taper strength calculations.
+Please refer to Figure~\ref{fig:taper_calc} for detailed taper strength calculations.
