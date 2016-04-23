@@ -1,23 +1,27 @@
-\section{Belt Drive}
+\section{Belt Drive}\label{sec:belt_drive}
 \subsection{Description}
 Synchronous belt drive systems are said to be efficient, reliable, virtually maintenance free and are supposed to outlast any comparable chain drive system. The system used on this vehicle consists of a Gates PowerGrip GT3 belt which is rated for high torque transmission at variable speeds while the sprockets and accompanying bushings were supplied by Martin Sprocket for cost saving reasons.
 
- \begin{table}[htbp]
- 	\centering
- 	\caption{Belt Drive Component Summary}
- 	\begin{tabular}{| lll |} \hline
- 		Component & Manufacturer & Description \\ \hline
- 		Belt & Gates & \begin{itemize}\item[Gates PowerGrip GT3]\item[225 teeth]\item[8mm pitch]\item[30mm width]
- 		\end{itemize} \\
- 		Large Sprocket & Martin Sprocket & \begin{itemize}\item[72 teeth]\item[Steel]\end{itemize} \\
- 		Large Bushing & Martin Sprocket & \begin{itemize}\item[2517 Taper-Lock Style Bushing]\item[To fit 2.25" shaft]\item[Steel]
- 		\end{itemize} \\
- 		Small Sprocket & Martin Sprocket & \begin{itemize}\item[44 teeth]\item[Steel]\end{itemize} \\
- 		Small Bushing & Martin Sprocket & \begin{itemize}\item[2012 Taper-Lock Style Bushing]\item[To fit 1.625" shaft]\item[Steel]
- 		\end{itemize} \\ 
- 	\end{tabular}
- 	\label{tab:drive_comp}
- \end{table}
+\begin{table}[htbp]
+	\centering
+	\caption{Belt Drive Component Summary}
+	\begin{tabular}{| lll |} \hline
+		Component & Manufacturer & Description \\ \hline
+		\multirow{4}{*}{Belt} & \multirow{4}{*}{Gates} & Gates PowerGrip GT3 \\
+		& & 225 teeth \\
+		& & 8 mm pitch \\
+		& & 30 mm pitch \\ \hline
+		\multirow{2}{*}{Large Sprocket} & \multirow{2}{*}{Martin Sprocket} & 72 teeth\\
+		& & Steel \\ \hline
+		\multirow{2}{*}{Large Bushing} & \multirow{2}{*}{Martin Sprocket} & 2517 Style Taper-Lock Bushing\\
+		& & Steel \\ \hline
+		\multirow{2}{*}{Small Sprocket} & \multirow{2}{*}{Martin Sprocket} & 44 teeth\\
+		& & Steel \\ \hline
+		\multirow{2}{*}{Small Bushing} & \multirow{2}{*}{Martin Sprocket} & 2012 Style Taper-Lock Bushing\\
+		& & Steel \\ \hline
+	\end{tabular}
+	\label{tab:drive_comp}
+\end{table}
 
 \subsection{Design Constraints and Functional Requirements}
 The overall width of belts and sprockets proved to be a considerable constraint in itself. While there was a specific width required to ensure power transmission without failure, this same width also hindered the design of the drive box as it would result in a thicker and bulkier design. The engineers at Gates were consulted regarding optimization of belt width and sprocket diameters. After a couple weeks of back and forth by email, it was decided that a 30mm wide belt would be best suited.
