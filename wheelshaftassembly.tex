@@ -13,6 +13,24 @@ The wheel shaft assembly consists of a combination of parts such as bearings, se
 	\label{fig:wheel_section}
 \end{figure}
 
+\begin{table}[htbp]
+	\centering
+	\caption{Component details for wheel shaft assembly.}
+	\begin{tabular}{| lll |} \hline
+		Component & Material & Product Number \\ \hline
+		Wheel Shaft & 4340 Steel (Q/T @ 650\degree C) & - \\
+		Housing & 6061 Aluminum & - \\
+		Rim Mount & 1045 Steel & - \\
+		Taper Roller Bearing & - & 32009 X/Q \\
+		Large Seal & - & 68x90x10 DL \\
+		Medium Seal & - & 2129B \\
+		Small Seal & - & 45x55x7 DL \\
+		1.25" Castle Nut & Steel & - \\
+	\end{tabular}
+	\label{tab:design_spec}
+\end{table}
+
+
 \subsection{Design Constraints and Functional Requirements}
 \subsubsection{Wheel Shaft}
 The combination of the weight of the vehicle and the forces imposed by the skid steer amounted to large values, thus requiring a strong and durable shaft that experienced minimal flex. Also to consider was the offset imposed by the centered rims on the tires. Clearance between the tires and drive box needed to be large enough to prevent any contact between the two and this in turn increased the overall length of the shaft,and also increasing the large cantilever loading. The shoulders and step diameters on the shaft also needed to match the available sizing of bearings, seals and bushings. It was advised by Penguin ASI that the shafts be made of 4340 steel that is quenched and tempered at 650℃ for availability, machinability and for company standards reasons.
@@ -45,9 +63,51 @@ Given the previously mentioned loading conditions and general shaft layout, a Ma
 
 The results obtained from the Matlab script were unreasonably large, however many machine design books state that the DE Goodman is simply a conservative estimate, therefore further finite element analysis using software was conducted. The static simulation resulted in reduced, but more acceptable diameters. 
 ~\ref {tab:shaft_calc}
-\\
-**INSERT FIGURE 33,34 AND 35***
-\\
+
+\begin{table}[htbp]
+	\centering
+	\caption{Summary of forces acting on the wheel shaft.}
+	\begin{tabular}{| llll |} \hline
+		Name & Variable & Value & Unit \\
+		Radial Force at wheel & F\textsubscript{ar} & 7600.00 & N \\
+		Tangential Force at wheel & F\textsubscript{at} & 546.80 & N \\
+		Radial Force at outside bearing & F\textsubscript{br} & 18950.00 & N \\
+		Tangential Force at outside bearing & F\textsubscript{bt} & 2333.00 & N \\
+		Radial Force at sprocket & F\textsubscript{cr} & 1470.00 & N \\
+		Tangential Force at sprocket & F\textsubscript{ct} & 4007.00 & N \\
+		Radial Force at inner bearing & F\textsubscript{dr} & 9900.00 & N \\
+		Tangential Force at inner bearing & F\textsubscript{dt} & 2220.00 & N \\
+		Skid Force & F\textsubscript{skid} & 2476.00 & N \\
+		Moment Skid & M\textsubscript{skid} & 566.00 & N \\
+		Moment Weight & M\textsubscript{weight} & 48.00 & N \\
+	\end{tabular}
+	\label{tab:shaft_calc}
+\end{table}
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/shaft_iso_rndr.jpg}
+	\caption{Wheel Shaft}
+	\label{fig:wheel_shaft}
+\end{figure}
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/hub_iso_rndr.jpg}
+	\caption{Bearing Housing}
+	\label{fig:housing}
+\end{figure}
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/small_sprocket_with_bushing_rndr.jpg}
+	\caption{Small Sprocket}
+	\label{fig:small_sprocket}
+\end{figure}
+
+\begin{figure}[h]\centering
+	\includegraphics[width=.7\linewidth]{dom/rim_mount_iso_rndr.jpg}
+	\caption{Rim Mount}
+	\label{fig:rid_mount}
+\end{figure}
+
 
 \subsubsection{Wheel Bearings}
 Taper roller bearings were selected for their superior axial loading capabilities while still having decent radial loading ratings when compared to other tradition radial bearings. Size for size, these bearings were still competitive as well. Once bearing type was selected, the bearing selection procedure outlined in the SKF Bearing Manual was followed in order to find the optimal bearing for the task. Based on the reaction forces calculated for the wheel shaft and its diameter, properly sized bearings were selected. A proper assessment also included bearing life calculations and taking into consideration the added axial forces by the taper roller bearings. Since the wheel shaft is essentially a cantilever beam, the bearing sizes were quite large and two separate bearings were required. One on the front and another on the back size. For compatibility, interchangeability and availability reasons, both bearings were selected to be identical even though the rear one doesn't see nearly as much loading.

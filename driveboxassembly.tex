@@ -20,8 +20,7 @@ The drive box is an aluminum structure build to house the external belt drive sy
 
 \subsection{Design Constraints and Functional Requirements}
 
-The main constraints imposed on the drive box design are dimensional since the drive box design is constrained by the components in houses. It houses the belts, sprockets, bearing, seals, and tensioner. These components must also be laid out as defined by the shaft design software as presented in Section~\ref{SECTION LABEL FOR SHAFT}. %% TODO
-Drive box dimension constraints are summarized in Table~\ref{tab:box_dim}. The drive box must be large enough to fit all the components, with additional clearance around the belt and sprocket for installation ease.
+The main constraints imposed on the drive box design are dimensional since the drive box design is constrained by the components in houses. It houses the belts, sprockets, bearing, seals, and tensioner. These components must also be laid out as defined by the shaft design software as presented in Section~\ref{sec:wheel_shaft_assembly}. Drive box dimension constraints are summarized in Table~\ref{tab:box_dim}. The drive box must be large enough to fit all the components, with additional clearance around the belt and sprocket for installation ease.
 
 \begin{table}[htbp]
 \centering
@@ -36,7 +35,7 @@ Component & Dimension & Value \\ \hline
 \label{tab:box_dim}
 \end{table}
 
-Component drawings for the gearbox are given in Appendix~\ref{REF THIS}. Assembly drawings are also given with the bill of materials.
+Component drawings for the gearbox are given in Appendix~\ref{sec:drawings}. Assembly drawings are also given with the bill of materials.
 
 The drive boxes serve two main purposes: house the interior components from the environment and support the weight of the robot with negligible deflection. Therefore, the drive box must be adequately sealed to prevent entry of fluids and/or dust particles that can cause belts to slip. They must also be strong enough not to deflect under the weight of the robot, or under the high forces seen during skid steers. This requirement is important for the obvious reason, but it is of particular importance for a belt drive. Sprockets must not lie out of plane, as this puts point loads on the belt and decrease its life.
 
@@ -46,7 +45,7 @@ During the design phase, it was decided that the best design for the drive box c
 
 Several minor changes were made after the assembly of the initial drive box. Given the tight time constraints of the project, the initial intention was to have the plates water jet cut. However, due to budget restrictions it was decided that the plates would instead be milled out in house, thus eliminating the need to have the two back-most plates separate. This alleviated some of the burden of manufacturing the plates. Also, the radii of the cutouts in the plates was increased to reduce stress concentrations.
 
-A finite element analysis was conducted on the final design for the drive box. The results are shown in Figures~\ref{fig:box_fea1} and~\ref{fig:box_fea2} in Appendix~\ref{box_fea}. Deflection was negligible, maximum stress was ${82.23\ MPa}$, well below yield strength. These results were confirmed with a deflection calculation performed in Matlab.
+A finite element analysis was conducted on the final design for the drive box. The results are shown in Figures~\ref{fig:box_fea1} and~\ref{fig:box_fea2} in Appendix~\ref{sec:box_fea}. Deflection was negligible, maximum stress was ${82.23\ MPa}$, well below yield strength. These results were confirmed with a deflection calculation performed in Matlab.
 
 
 \subsection{Belt Tensioner}
@@ -62,6 +61,6 @@ The belt tensioner is a custom-made, static, screw adjusted tensioner. The belt 
 
 \subsubsection{Design and Analysis}
 
-The tensioner must withstand the loads applied by the tensioned belt. Therefore, an FEA analysis was conducted on the assembly. For the analysis, the top of the bracket was held fixed, and a load of 5600 N was applied to the shaft in a vertical upward direction. The results showed that the maximum displacement experienced by the tensioner was ${3.162*10^{-2}}$ mm and the maximum stress in 53.76 MPa, well below the yield strength of 1045 steel. These results were confirmed with deflection calculations in Matlab, yielding a deflection of ${4.1913*10^{-2}}$ mm. The results are shown in Figure~\ref{fig:idler_fea1} and~\ref{fig:idler_fea2} in Appendix~\ref{idler_fea}.
+The tensioner must withstand the loads applied by the tensioned belt. Therefore, an FEA analysis was conducted on the assembly. For the analysis, the top of the bracket was held fixed, and a load of 5600 N was applied to the shaft in a vertical upward direction. The results showed that the maximum displacement experienced by the tensioner was ${3.162*10^{-2}}$ mm and the maximum stress in 53.76 MPa, well below the yield strength of 1045 steel. These results were confirmed with deflection calculations in Matlab, yielding a deflection of ${4.1913*10^{-2}}$ mm. The results are shown in Figure~\ref{fig:idler_fea1} and~\ref{fig:idler_fea2} in Appendix~\ref{sec:idler_fea}.
 
 
