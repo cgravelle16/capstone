@@ -39,11 +39,10 @@ The combination of the weight of the vehicle and the forces imposed by the skid 
 The bearings for this application needed to withstand the large axial forces due to the aggressive skid steer motions and still handle the weight of the vehicle. Size was also an important consideration as larger bearings would directly increased the size of other components such as bearing housings.
 
 \subsubsection{Front Bearing Housing}
-The front bearing housing had many factors affecting its design. It need to house the taper roller bearings that were mounted onto the shaft. In addition, an o-ring groove needed to be added to meet the sealing requirements and two radial seals needed to be added on each side of the bearing. It also needed to be quick and easy to machine. 
+The front bearing housing had many factors affecting its design. It needed to house the taper roller bearings that were mounted onto the shaft. In addition, an o-ring groove needed to be added to meet the sealing requirements and two radial seals needed to be added on each side of the bearing. It also needed to be quick and easy to machine. 
 
 \subsubsection{Rear Bearing Housing}
 The rear bearing housing serves the same purpose as the front one. It must support the loads applied as well as retained the bearing and provide adequate sealing by means of an o-ring. It must also accommodate a radial seal for the rear bearing and must be a slim as possible to prevent any contact between its back edge and the body shell of the unit under extreme loading conditions.
-
 
 \subsubsection{Rim Mount}
 The rim mount needed to feature a self centering system for ease of installation. Manufacturability was also an important consideration as splines could be costly, while a taper design is cheap and quick. The component also need to withstand all the imposed forces and be easy to replicate for future units. Using in stock materials was also an added bonus for the client.
@@ -54,7 +53,7 @@ Two different style of seals were needed for the proposed method of assembly and
 %\subsection{Functional Requirements}
 \subsection{Analysis and Design}
 \subsubsection{Wheel Shaft}
-First step of the design was to set up the shaft layout. Since the belt design had already been done, the dimensions and style of bushings for the sprockets were already known. A certain width was then set aside for bearing allowance and rim mount location was predetermined to be at the very end of the shaft. The centered rims also required a minimum distance between the drivebox panel and tire. Giving these conditions, a preliminary shaft layout is seen in ***INSERT FIGURE***.
+First step of the design was to set up the shaft layout. Since the belt design had already been done, the dimensions and style of bushings for the sprockets were already known. A certain width was then set aside for bearing width and rim mount location was predetermined to be at the very end of the shaft. The centered rims also required a minimum distance between the drivebox panel and tire. Giving these conditions, a preliminary shaft layout was made for use in the FBD calculations.
 
 Given the previously mentioned loading conditions and general shaft layout, a Matlab script was created to calculate the reaction forces throughout the shaft and generate moment diagrams. A second Matlab script was created to calculate the minimum shaft diameters based the DE Goodman method using previously calculated moments, material properties and shaft features such as keys, fillets and shoulder sizes.
 
@@ -96,7 +95,7 @@ The results obtained from the Matlab script were unreasonably large, however man
 \subsubsection{Wheel Bearings}
 Taper roller bearings were selected for their superior axial loading capabilities while still having decent radial loading ratings when compared to other tradition radial bearings. Size for size, these bearings were still competitive as well. Once bearing type was selected, the bearing selection procedure outlined in the SKF Bearing Manual was followed in order to find the optimal bearing for the task. Based on the reaction forces calculated for the wheel shaft and its diameter, properly sized bearings were selected. A proper assessment also included bearing life calculations and taking into consideration the added axial forces by the taper roller bearings. Since the wheel shaft is essentially a cantilever beam, the bearing sizes were quite large and two separate bearings were required. One on the front and another on the back size. For compatibility, interchangeability and availability reasons, both bearings were selected to be identical even though the rear one doesn't see nearly as much loading.
 
-Please refer to Section ~\ref{ws_bearing} for detailed work on bearing selection. See bearing calculations to Figure ~\ref{bearing_calc} in Appendix for a detailed outline of the SKF bearing selection process.
+Please refer to Section ~\ref{ws_bearing} for detailed work on bearing selection. See bearing calculations in Figure ~\ref{bearing_calc} in Appendix for a detailed outline of the SKF bearing selection process.
 
 \subsubsection{Shaft Seals}
 Two type of shaft seals were required for the proposed shaft layout. The two outermost seals are housing mounted seals. These are the most common type of radial seals and offered the largest selection. Knowing the shaft dimensions from bearing selection and shaft diameters, all that needed to be selected is which style of shaft seal to chose. A conventional seal with a rubber nitrile coating was recommended by the professionals at Penguin ASI. As for the second type of seal, the selection wasn't so obvious. This second seal was to be a shaft mounted seal, however selection for these proved to be very limited. Only metric sizes were available and there we large variations in diameters. Choosing the closest one to the minimum diameter calculated that would fit between the bearing and sprocket left only one option, however this SKF seal still came with the preferred nitrile rubber coating.
@@ -115,7 +114,7 @@ There were many constraints to the front bearing housing and with the seals sele
 Please refer to FEA section of the report for details strength analysis of bearing housing.
 
 \subsubsection{Rear Bearing Housing}
-The rear bearing housing was also a straight forward design due to the imposed constraints. For the same reasons as the front bearing housing, 5 inch 6061 round stock was used and a quick verification of bolt and thread strength was conducted. An o-ring groove was also added for sealing purposes.
+The rear bearing housing was also a straight forward design due to the imposed design constraints. For the same reasons as the front bearing housing, 5 inch 6061 round stock was used and a quick verification of bolt and thread strength was conducted. An o-ring groove was also added for sealing purposes.
 
 The final design of this component varied slightly from the initial one. The outer bore was reduced to increase the outer strength of the unit and for better and quick manufacturability. The depth dimensions didn't change, only the outer diameter did. The new design also meant getting rid of the nuts on the back side of the unit as the new design incorporated the thread inside the components, which also simplified the assembly.
 
@@ -127,7 +126,7 @@ The rim mounts from the previous robot were still in good condition and only nee
 \begin{figure}[h]\centering
 	\includegraphics[width=.7\linewidth]{dom/rim_mount_iso_rndr.jpg}
 	\caption{Rim Mount}
-	\label{fig:rid_mount}
+	\label{fig:rim_mount}
 \end{figure}
  
 
