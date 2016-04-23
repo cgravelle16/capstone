@@ -1,11 +1,50 @@
 \section{Wheel Shaft Assembly}
-\subsection{Description}
+The wheel shaft assembly consists of a combination of parts such as bearings, seals and structural members. The assembly needed to be compact, cost efficient and easy to assemble with manufacturability in mind. %With the shaft being the main supporting component connecting the wheels to the drive box, much strength analysis has been conducted for it with varied materials and profiles. The rim mount which boasts the wheel onto the shaft also needed to be an elegant solution that provided self centering fastening. Taper roller bearings were also needed to handle the large axial forces induced by the skid steer motions. In order to house the bearings close to the drivebox, a bearing housing was designed in such a way that limits the flex in the shaft. To run a dry drivebox, radial seals were added to either side of the bearings to contain the grease, but also help limit contamination from the outside environment.
+
 \subsection{Design Constraints}
-\subsection{Functional Requirements}
+\subsubsection{Wheel Shaft}
+The combination of the weight of the vehicle and the forces imposed by the skid steer amounted to large values, thus requiring a strong and durable shaft that experienced minimal flex. Also to consider was the offset imposed by the centered rims on the tires. Clearance between the tires and drive box needed to be large enough to prevent any contact between the two and this in turn increased the overall length of the shaft,and also increasing the large cantilever loading. The shoulders and step diameters on the shaft also needed to match the available sizing of bearings, seals and bushings. It was advised by Penguin ASI that the shafts be made of 4340 steel that is quenched and tempered at 650℃ for availability, machinability and for company standards reasons.
+
+\subsubsection{Wheel Bearings}
+The bearings for this application needed to withstand the large axial forces due to the aggressive skid steer motions and still handle the weight of the vehicle. Size was also an important consideration as larger bearings would directly increased the size of other components such as bearing housings.
+\\
+***INSERT TABLE OF BEARING SELECTION***
+\\
+
+\subsubsection{Front Bearing Housing}
+The front bearing housing had many factors affecting its design. It need to house the taper roller bearings that were mounted onto the shaft. In addition, an o-ring groove needed to be added to meet the sealing requirements and two radial seals needed to be added on each side of the bearing. It also needed to be quick and easy to machine. 
+
+\subsubsection{Rear Bearing Housing}
+The rear bearing housing serves the same purpose as the front one. It must support the loads applied as well as retained the bearing and provide adequate sealing by means of an o-ring. It must also accommodate a radial seal for the rear bearing and must be a slim as possible to prevent any contact between its back edge and the body shell of the unit under extreme loading conditions.
+
+
+\subsubsection{Rim Mount}
+The rim mount needed to feature a self centering system for ease of installation. Manufacturability was also an important consideration as splines could be costly, while a taper design is cheap and quick. The component also need to withstand all the imposed forces and be easy to replicate for future units. Using in stock materials was also an added bonus for the client.
+
+\subsubsection{Shaft Seals}
+Two different style of seals were needed for the proposed method of assembly and shaft layout. The front-interior seal needed shaft mounted, meaning it would be pressed onto the shaft and would seal against the housing while the two outer ones were pressed into their housings and sealed against the shaft. All seals needed to be economical, durable and standard size for availability reasons. Penguin ASI also recommended using seals covered with a nitrile rubber coating for optimal sealing and to meet company standards.
+
+%\subsection{Functional Requirements}
 \subsection{Analysis and Design}
 \subsubsection{Wheel Shaft}
+First step of the design was to set up the shaft layout. Since the belt design had already been done, the dimensions and style of bushings for the sprockets were already known. A certain width was then set aside for bearing allowance and rim mount location was predetermined to be at the very end of the shaft. The centered rims also required a minimum distance between the drivebox panel and tire. Giving these conditions, a preliminary shaft layout is seen in ***INSERT FIGURE***.
+
+Given the previously mentioned loading conditions and general shaft layout, a Matlab script was created to calculate the reaction forces throughout the shaft and generate moment diagrams. A second Matlab script was created to calculate the minimum shaft diameters based the DE Goodman method using previously calculated moments, material properties and shaft features such as keys, fillets and shoulder sizes.
+
+The results obtained from the Matlab script were unreasonably large, however many machine design books state that the DE Goodman is simply a conservative estimate, therefore further finite element analysis using software was conducted. The static simulation resulted in reduced, but more acceptable diameters. 
+~\ref {tab:shaft_calc}
+\\
+**INSERT FIGURE 33,34 AND 35***
+\\
+
 \subsubsection{Wheel Bearings}
+
 \subsubsection{Shaft Seals}
 \subsubsection{Front Bearing Housings}
 \subsubsection{Rear Bearing Housing}
+The rear bearing housing needed 
+
 \subsubsection{Rim Mount}
+The rim mounts from the previous robot were still in good condition and only needed minor modifications for them to meet the requirements of the new design. Modifications include a change to the bolt pattern and boring out the mounting hole onto the shaft. After some calculations, it was determined that a standard taper hole design of 4.18\degree would be stronger enough to resist the rotation moments at the wheels. 
+\\
+***INSERT FIG 36***
