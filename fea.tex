@@ -20,7 +20,7 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{dom/loading_conditions_calc.jpg}
+	\includegraphics[width=\textwidth,angle=-90]{dom/loading_conditions_calc.jpg}
 	\caption{FBD of loading conditions for wheel shaft.}
 	\label{fig:fbd_wheelshaft}
 \end{figure}
@@ -34,7 +34,7 @@
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{dom/taper_design_calc.jpg}
+	\includegraphics[width=\textwidth,angle=-90]{dom/taper_design_calc.jpg}
 	\caption{Taper Mount Design Calculations}
 	\label{fig:taper_calc}
 \end{figure}
@@ -47,6 +47,25 @@
 \end{figure}
 
 \subsection{Wheel Bearings}\label{sec:ws_bearing}
+
+\begin{table}[htbp]
+	\centering
+	\caption{Brief Bearing Selection Table}
+	\begin{tabular}{| p{4cm}p{4cm}p{4cm}l |} \hline
+		Bearing Type & Pros & Cons & Final Say \\ \hline
+		\multirow{2}{4cm}{Deep Groove Ball Bearing} & Sealed & Low Load Capabilities & \multirow{2}{*}{Yes} \\
+		& No transferred axial load & Larger outer diameter & \\ \hline
+		\multirow{2}{4cm}{Regular Angular Contact Ball Bearings} & \multirow{2}{4cm}{Decent axial loading capabilities} & Poor load capacity & \multirow{2}{*}{No} \\
+		& & Need minimum load & \\ \hline
+		\multirow{3}{4cm}{Four Point Angular Contact Ball Bearings} & Great load carrying capacity & \multirow{3}{4cm}{Requires axial load larger than radial load} & \multirow{3}{*}{No} \\
+		& Thin & & \\
+		& Sealed & & \\ \hline
+		\multirow{3}{4cm}{Tapered Roller Bearings} & Small & Not sealed & \multirow{3}{*}{Yes} \\
+		& Great axial loading capabilities & Imposed axial load from radial load & \\
+		& Lightweight & & \\ \hline
+	\end{tabular}
+	\label{tab:bearing_selection}
+\end{table}
 
 \begin{figure}[H]
 	\centering
