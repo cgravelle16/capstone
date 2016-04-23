@@ -1,5 +1,43 @@
 \section{Drive Box Assembly}
-\subsection{Description}
+
+The drive box is an aluminum structure build to house the external belt drive system. It consists of four separate aluminum plates bolted together around the perimeter for modular assembly. Three of the plates are structural, while the fourth frontmost plate serves only a sealing purpose. There are five separate bearing housings protruding from the drive box and bolted to the structural plates: three in the front (the wheel shaft passes through two of them), and two in the back. The pivot is bolted through the back plate. The drive box is shown in Figures~\ref{fig:box_bld} and~\ref{fig:box_in}. Buna-N o-rings are installed between each separate component of the drive box to ensure proper sealing.
+
+\begin{figure}[htbp]
+\centering
+\begin{minipage}{0.45\linewidth} \centering
+\includegraphics[height=0.22\textheight]{images/drive_box_assembly_NEW_bld}
+\captionof{figure}[Completed Drive Boxes]{Two completed drive boxes before being mounted on the robot. One is the mirror image of the other.}
+\label{fig:box_bld}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\centering
+\includegraphics[height=0.22\textheight]{images/drive_box_open_bld}
+\captionof{figure}[Interior of the Drive Boxes]{The drive box houses two wheel shaft assemblies, one drive shaft assembly, the belt, and tensioner.}
+\label{fig:box_in}
+\end{minipage}
+\end{figure}
+
 \subsection{Design Constraints}
+
+The main constraints imposed on the drive box design are dimensional since the drive box design is constrained by the components in houses. It houses the belts, sprockets, bearing, seals, and tensioner. These components must also be laid out as defined by the shaft design software as presented in Section~\ref{SECTION LABEL FOR SHAFT}. %% TODO
+Drive box dimension constraints are summarized in Table~\ref{tab:box_dim}. The drive box must be large enough to fit all the components, with additional clearance around the belt and sprocket for installation ease.
+
+\begin{table}[htbp]
+\centering
+\caption{Gearbox dimension constraints}
+\begin{tabular}{| lll |}\hline
+Component & Dimension & Value \\ \hline
+\multirow{2}{*}{Driving sprocket} & Diameter & 5  in \\
+& Width & over 1.5 in \\
+\multirow{2}{*}{Wheel sprocket} & Diameter & 7.6  in \\
+& Width & over 1.5 in \\ \hline
+\end{tabular}
+\label{tab:box_dim}
+\end{table}
+
 \subsection{Functional Requirements}
+
+The drive boxes serve two main purposes: house the interior components from the environment and support the weight of the robot with negligible deflection. Therefore, the drive box must be adequately sealed to prevent entry of fluids and/or dust particles that can cause belts to slip. They must also be strong enough not to deflect under the weight of the robot, or under the high forces seen during skid steers. This requirement is important for the obvious reason, but it is of particular importance for a belt drive. Sprockets must not lie out of plane, as this puts point loads on the belt and decrease its life.
+
 \subsection{Analysis and Design}
