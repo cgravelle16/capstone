@@ -8,12 +8,29 @@ Top Speed & 3 & km/h \\
 Battery Life & 3.2 & hrs \\
 Motor Power & 2984 & W \\
 Payload & 230 & kg \\
-Number of wheels & 8 & - \\
+Number of wheels & 8 & - \\ \hline
 \end{tabular}
 \label{tab:design_spec}
 \end{table}
-
  
+\begin{table}[htbp]
+\centering
+\caption{Brief Bearing Selection Table}
+\begin{tabular}{| p{4cm}p{4cm}p{4cm}l |} \hline
+Bearing Type & Pros & Cons & Final Say \\ \hline
+\multirow{2}{4cm}{Deep Groove Ball Bearing} & Sealed & Low Load Capabilities & \multirow{2}{*}{Yes} \\
+& No transferred axial load & Larger outer diameter & \\ \hline
+\multirow{2}{4cm}{Regular Angular Contact Ball Bearings} & \multirow{2}{4cm}{Decent axial loading capabilities} & Poor load capacity & \multirow{2}{*}{No} \\
+& & Need minimum load & \\ \hline
+\multirow{3}{4cm}{Four Point Angular Contact Ball Bearings} & Great load carrying capacity & \multirow{3}{4cm}{Requires axial load larger than radial load} & \multirow{3}{*}{No} \\
+& Thin & & \\
+& Sealed & & \\ \hline
+\multirow{3}{4cm}{Tapered Roller Bearings} & Small & Not sealed & \multirow{3}{*}{Yes} \\
+& Great axial loading capabilities & Imposed axial load from radial load & \\
+& Lightweight & & \\ \hline
+\end{tabular}
+\label{tab:bearing_selection}
+\end{table}
 
 
   \begin{table}[htbp]
