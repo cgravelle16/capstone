@@ -36,8 +36,22 @@ Component & Dimension & Value \\ \hline
 \label{tab:box_dim}
 \end{table}
 
+Component drawings for the gearbox are given in Appendix~\ref{CITE APPENDIX}. Assembly drawings are also given with the bill of materials.
+
 \subsection{Functional Requirements}
 
 The drive boxes serve two main purposes: house the interior components from the environment and support the weight of the robot with negligible deflection. Therefore, the drive box must be adequately sealed to prevent entry of fluids and/or dust particles that can cause belts to slip. They must also be strong enough not to deflect under the weight of the robot, or under the high forces seen during skid steers. This requirement is important for the obvious reason, but it is of particular importance for a belt drive. Sprockets must not lie out of plane, as this puts point loads on the belt and decrease its life.
 
 \subsection{Analysis and Design}
+
+% TODO calcs, FEA, justify material selection, justify changes
+
+\subsection{Belt Tensioner}
+
+The belt tensioner is a custom-made, static, screw adjusted tensioner. The belt sits in an aluminum pulley. Sealed roller bearings are pressed into the pulley and the assembly is pressed onto a shaft that fits into a aluminum bracket. A screw threaded through the drive box centre plate presses against a thin steel plate mounted on top of the bracket to tension the belt. The assembly is shown in Figure~\ref{fig:box_in}. The brackets slides along slots milled out of the drive box plates.
+
+\subsubsection{Design and Analysis}
+
+The tensioner must withstand the loads applied by the tensioned belt. Therefore, an FEA analysis was conducted on the assembly. For the analysis, the top of the bracket was held fixed, and a load of 5600 N was applied to the shaft in a vertical upward direction. The results showed that the maximum displacement experienced by the tensioner was ${3.162*10^{-2}}$ mm and the maximum stress in 53.76 MPa, well below the yield strength of 1045 steel. These results were confirmed with deflection calculations in Matlab, yielding a deflection of ${4.1913*10^{-2}}$ mm. The results are shown in Figure~\ref{APPENDIX THIS} and~\ref{fig:REF THIS} in Appendix~\ref{fea}.
+
+
